@@ -29,13 +29,16 @@ export default function Home() {
     const events = eventRefs.current;
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setCurrentEventIndex(index);
+            const index = eventRefs.current.findIndex(ref => ref === entry.target);
+            if (index !== -1) {
+              setCurrentEventIndex(index);
+            }
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     events.forEach((event) => observer.observe(event));
@@ -45,10 +48,20 @@ export default function Home() {
 
   const scrollToTimeline = () => {
     timelineRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // After scrolling to timeline, set to first event if available
+    setTimeout(() => {
+      if (config.timelineEvents.length > 0 && currentEventIndex === -1) {
+        setCurrentEventIndex(0);
+      }
+    }, 500);
   };
 
   const scrollToEvent = (index) => {
     eventRefs.current[index]?.scrollIntoView({ behavior: 'smooth' });
+    // Force update index after scroll to ensure navigation sync
+    setTimeout(() => {
+      setCurrentEventIndex(index);
+    }, 300);
   };
 
   const scrollUp = () => {
