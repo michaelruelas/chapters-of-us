@@ -46,6 +46,20 @@ export default function Home() {
     return () => observer.disconnect();
   }, [config]);
 
+  // Dynamic title update based on current view
+  useEffect(() => {
+    if (!config) return;
+
+    let title;
+    if (currentEventIndex === -1) {
+      title = `Our Anniversary: ${anniversaryYears} years! - ${config.siteTitle}`;
+    } else {
+      const event = config.timelineEvents[currentEventIndex];
+      title = `${event.title} - ${config.siteTitle}`;
+    }
+    document.title = title;
+  }, [currentEventIndex, config, anniversaryYears]);
+
   const scrollToTimeline = () => {
     timelineRef.current?.scrollIntoView({ behavior: 'smooth' });
     // After scrolling to timeline, set to first event if available
