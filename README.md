@@ -26,9 +26,13 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Customization
 
-The site is fully customizable via the `public/config.json` file. Edit this file to personalize your anniversary timeline.
+The site is fully customizable via the `public/config.json` file and environment variables (`.env.local`). Edit these to personalize your anniversary timeline without code changes.
 
-### Configuration Structure
+### 1. config.json (Content & Events)
+
+Edit `public/config.json` for your story details. This loads dynamically.
+
+#### Structure
 
 ```json
 {
@@ -50,16 +54,49 @@ The site is fully customizable via the `public/config.json` file. Edit this file
 }
 ```
 
-- **anniversaryDate**: Date in YYYY-MM-DD format (e.g., "2016-10-10"). Used to calculate the number of years for the title screen.
-- **timelineEvents**: Array of events. Each event includes:
-  - **id**: Unique identifier (e.g., "event-1") for navigation anchors.
-  - **title**: Main event title (e.g., "Our First Date").
-  - **subtitle**: Date or subheading (e.g., "September 21, 2013").
-  - **location**: Event location (e.g., "The Little Cafe, Downtown").
-  - **description**: Detailed story text.
-  - **media**: Array of 2-3 image URLs (e.g., from Unsplash or placeholders). Images display as vintage polaroids.
+- **anniversaryDate**: Date in YYYY-MM-DD format (e.g., "2016-10-10"). Used to calculate years for the title screen (can be overridden via env).
+- **timelineEvents**: Array of events (5-10 recommended). Each includes:
+  - **id** (required): Unique ID (e.g., "event-1") for navigation.
+  - **title** (required): Main heading (e.g., "Our First Date").
+  - **subtitle** (required): Date/tagline (e.g., "September 21, 2013").
+  - **location** (required): Where it happened (e.g., "The Little Cafe, Downtown").
+  - **description** (required): Story text (1-3 sentences).
+  - **media** (required): 2-3 image URLs (e.g., Unsplash, ImgBB, or `/public/images/my-photo.jpg` for local). Render as polaroids.
 
-After editing `config.json`, restart the dev server (`npm run dev`) to see changes. Replace placeholder images with your own (upload to a host like ImgBB or use local files in `/public`).
+After editing, restart `npm run dev` to see changes. Replace placeholders with real photos (high-res, 600x400+).
+
+### 2. Environment Variables (.env.local)
+
+For server/port and overrides, use `.env.local` (gitignored template: `.env.example`).
+
+#### Setup
+1. Copy: `cp .env.example .env.local`
+2. Edit `.env.local` (never commit it).
+3. Restart server for changes.
+
+#### Example .env.local
+```
+# Development server port (default: 3000)
+PORT=3000
+
+# Base URL for production (e.g., absolute links/images)
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+# Optional: Override anniversary date (YYYY-MM-DD)
+NEXT_PUBLIC_ANIVERSARY_DATE=2013-09-21
+
+# Optional: Custom image domains (update next.config.js if needed)
+```
+
+#### Key Variables
+- **PORT** (number): Dev/production server port (e.g., `PORT=51253` for http://localhost:51253). Next.js auto-detects.
+- **NEXT_PUBLIC_BASE_URL** (string): Public base URL (e.g., `https://your-homelab.com`). For future links/images.
+- **NEXT_PUBLIC_ANIVERSARY_DATE** (string, YYYY-MM-DD): Overrides `config.json` anniversaryDate for year calc (e.g., forces "12 years!").
+- **Notes**:
+  - `NEXT_PUBLIC_` vars are client-side (browser-safe).
+  - For CORS/iframes: Add `--hostname 0.0.0.0` to `package.json` dev script.
+  - Testing: Change PORT, restart `npm run dev`, visit new URL. Year updates via env override.
+  - Production: Set vars in deploy platform (Vercel dashboard) or server env (nginx/Docker).
 
 ## Learn More
 
