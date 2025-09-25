@@ -150,10 +150,10 @@ export default function Home() {
                     {event.media.map((src, i) => (
                       <div
                         key={i}
-                        className="relative w-full max-w-xs polaroid flex-shrink-0"
+                        className="relative w-[600px] h-[400px] max-w-full mx-auto polaroid flex-shrink-0"
                         style={{ transform: `rotate(${i % 2 === 0 ? '-' : ''}${2 + Math.random() * 4}deg)` }}
                       >
-                        <Image src={src} alt={event.title} fill className="object-cover" />
+                        <Image src={src} alt={event.title} fill className="object-cover rounded" />
                         <p className="caption font-dancing-script text-xl">{event.title}</p>
                       </div>
                     ))}
