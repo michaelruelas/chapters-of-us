@@ -1,0 +1,61 @@
+{
+  "anniversaryDate": "2013-09-21T12:00:00",
+  "timelineEvents": [
+    {
+      "id": "event-1",
+      "title": "Our First Date",
+      "subtitle": "September 21, 2013",
+      "location": "The Little Cafe, Downtown",
+      "description": "It all started with a cup of coffee. We talked for hours and it felt like minutes. I knew something special was beginning.",
+      "media": [
+        "https://placehold.co/600x400/d1d4c9/5b6058?text=First+Date",
+        "https://placehold.co/600x400/e0dace/5b6058?text=Coffee"
+      ]
+    },
+    {
+      "id": "event-2",
+      "title": "The Proposal",
+      "subtitle": "June 5, 2015",
+      "location": "Sunset Point, National Park",
+      "description": "Under a sky painted with sunset colors, I asked, and you said yes. The happiest moment of my life, until our wedding day.",
+      "media": [
+        "https://placehold.co/600x400/f0e6e6/5b6058?text=Proposal",
+        "https://placehold.co/600x400/d8c8c8/5b6058?text=The+Ring",
+        "https://placehold.co/600x400/c7b2b2/5b6058?text=Sunset"
+      ]
+    },
+    {
+      "id": "event-3",
+      "title": "Our Wedding Day",
+      "subtitle": "October 10, 2016",
+      "location": "The Grand Ballroom",
+      "description": "Surrounded by family and friends, we promised forever. A day filled with love, laughter, and dancing.",
+      "media": [
+        "https://placehold.co/600x400/f5f1e8/5b6058?text=Wedding",
+        "https://placehold.co/600x400/e8e2d3/5b6058?text=I+Do"
+      ]
+    },
+    {
+      "id": "event-4",
+      "title": "Honeymoon in Paradise",
+      "subtitle": "October 12, 2016",
+      "location": "Maui, Hawaii",
+      "description": "Our first adventure as a married couple. Sandy toes, salty kisses, and unforgettable memories.",
+      "media": [
+        "https://placehold.co/600x400/c2d5d8/5b6058?text=Honeymoon",
+        "https://placehold.co/600x400/a3c4c9/5b6058?text=Beach+View"
+      ]
+    },
+    {
+      "id": "event-5",
+      "title": "Moved Into Our First Home",
+      "subtitle": "May 1, 2018",
+      "location": "123 Oak Street",
+      "description": "The start of a new chapter. We turned a house into our home, one memory at a time.",
+      "media": [
+        "https://placehold.co/600x400/d9e2d1/5b6058?text=Our+Home",
+        "https://placehold.co/600x400/c6d6ba/5b6058?text=Front+Door"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.font-dancing-script {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.landing-screen {
+  background-image: url('https://images.unsplash.com/photo-1502691879805-64ac0353c15a?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.polaroid {
+  background-color: #f5f5f5; /* Off-white for polaroid frame */
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  padding-bottom: 4rem; /* More space at the bottom for captions */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: scale(1.02) rotate(1deg);
+}
+
+.polaroid .caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  text-align: center;
+}
+
+/* Custom timeline line */
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background-color: #d1d5db; /* gray-300 */
+  z-index: -1;
+}
+
+/* Style for the timeline navigation dots */
+.timeline-nav-dot {
+  transition: all 0.3s ease;
+}
+
+.timeline-nav-dot.active {
+  transform: scale(1.5);
+  background-color: #a78bfa; /* violet-400 */
+}
+
+/* Arrow styles */
+.nav-arrow {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-arrow.visible {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+.nav-arrow:hover {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.1);
+}
+
+#up-arrow { top: 2rem; }
+#down-arrow { bottom: 2rem; }
