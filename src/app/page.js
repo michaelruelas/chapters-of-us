@@ -96,11 +96,11 @@ export default function Home() {
     <div className="bg-[#FFF8F0] text-gray-800 min-h-screen">
       {/* Landing Screen */}
       <section className="h-screen w-full flex flex-col items-center justify-center text-center p-4 text-white landing-screen relative">
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10">
           <h1 className="font-playfair text-5xl md:text-7xl font-bold tracking-tight">Our Anniversary</h1>
           <p className="font-dancing-script text-4xl md:text-6xl mt-4 mb-8">{anniversaryYears} years!</p>
-          <button 
+          <button
             onClick={scrollToTimeline}
             className="bg-white text-gray-800 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300"
           >

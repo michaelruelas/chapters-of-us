@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - NEXT_PUBLIC_BASE_URL=http://localhost:3010
+      - NEXT_PUBLIC_ANIVERSARY_DATE=2011-09-25T12:00:00
+    restart: unless-stopped

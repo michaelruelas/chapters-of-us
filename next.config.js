@@ -1,6 +1,8 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
+  allowedDevOrigins: ['chapters-of-us.home.pugcasa.com'],
   images: {
     dangerouslyAllowSVG: true,
     remotePatterns: [

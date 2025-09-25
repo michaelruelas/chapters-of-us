@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import configData from '../../public/config.json';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,8 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 async function getConfig() {
-  const res = await fetch('/config.json', { cache: 'force-cache' });
-  return res.json();
+  return configData;
 }
 
 export async function generateMetadata() {
@@ -26,7 +26,7 @@ export async function generateMetadata() {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
