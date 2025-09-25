@@ -40,71 +40,78 @@ body {
   background-position: center;
 }
 
-.polaroid {
-  background-color: #f5f5f5; /* Off-white for polaroid frame */
-  border: 1px solid #e0e0e0;
-  padding: 1rem;
-  padding-bottom: 4rem; /* More space at the bottom for captions */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
 
-.polaroid:hover {
-  transform: scale(1.02) rotate(1deg);
+
+.polaroid {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+  border: 1em solid white;
+  border-bottom: 4em solid white;
 }
 
 .polaroid .caption {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.25rem;
   text-align: center;
-}
-
-/* Custom timeline line */
-.timeline-line::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 3px;
-  height: 100%;
-  background-color: #d1d5db; /* gray-300 */
-  z-index: -1;
-}
-
-/* Style for the timeline navigation dots */
-.timeline-nav-dot {
-  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  color: #474747;
 }
 
 .timeline-nav-dot.active {
+  background-color: #2563eb;
   transform: scale(1.5);
-  background-color: #a78bfa; /* violet-400 */
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  transition: all 0.3s ease;
 }
 
-/* Arrow styles */
 .nav-arrow {
   position: fixed;
-  left: 50%;
+  left: 98%;
   transform: translateX(-50%);
-  z-index: 30;
+  z-index: 20;
   cursor: pointer;
-  transition: opacity 0.3s, transform 0.3s;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.nav-arrow.visible {
-  opacity: 0.8;
-  visibility: visible;
+  opacity: 0.5;
+  color: var(--color-foreground);
+  transition: opacity 0.3s ease;
 }
 
 .nav-arrow:hover {
-  opacity: 1;
-  transform: translateX(-50%) scale(1.1);
+  opacity: 0.8;
 }
 
-#up-arrow { top: 2rem; }
-#down-arrow { bottom: 2rem; }
+.nav-arrow.visible {
+  opacity: 0.5;
+}
+
+#up-arrow {
+  top: 5%;
+}
+
+#down-arrow {
+  bottom: 5%;
+}
+
+.event-bg-0 {
+  background-color: #FFF8F0;
+}
+
+.event-bg-1 {
+  background-color: #F8F0E8;
+}
+
+.event-bg-2 {
+  background-color: #F0E8E0;
+}
+
+.event-bg-3 {
+  background-color: #E8E0D8;
+}
+
+.event-bg-4 {
+  background-color: #E0D8D0;
+}
+
+.event-bg-5 {
+  background-color: #D8D0C8;
+}

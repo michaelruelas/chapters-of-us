@@ -1,12 +1,15 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+import PhotoDeck from '../components/PhotoDeck';
 
 export default function Home() {
   const [config, setConfig] = useState(null);
   const [anniversaryYears, setAnniversaryYears] = useState(0);
   const [currentEventIndex, setCurrentEventIndex] = useState(-1);
+  const [visibleEvents, setVisibleEvents] = useState([]);
   const timelineRef = useRef(null);
   const eventRefs = useRef([]);
 
@@ -34,7 +37,14 @@ export default function Home() {
             const index = eventRefs.current.findIndex(ref => ref === entry.target);
             if (index !== -1) {
               setCurrentEventIndex(index);
+              setVisibleEvents(prev => {
+                const newVisible = [...prev];
+                newVisible[index] = true;
+                return newVisible;
+              });
             }
+            // Trigger falling animation
+            entry.target.classList.add('animate-fall');
           }
         });
       },
@@ -78,8 +88,15 @@ export default function Home() {
     }, 300);
   };
 
+  const scrollToHome = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setCurrentEventIndex(-1);
+  };
+
   const scrollUp = () => {
-    if (currentEventIndex > 0) {
+    if (currentEventIndex === 0) {
+      scrollToHome();
+    } else if (currentEventIndex > 0) {
       scrollToEvent(currentEventIndex - 1);
     }
   };
@@ -131,58 +148,58 @@ export default function Home() {
         </aside>
 
         {/* Main Vertical Timeline */}
-        <div className="container mx-auto px-4 py-0 timeline-line relative snap-y snap-mandatory h-screen overflow-y-auto">
+        <div className="w-full py-0 timeline-line relative snap-y snap-mandatory h-screen overflow-y-auto">
           <div className="flex flex-col h-full">
             {config.timelineEvents.map((event, index) => (
-              <div
+              <motion.div
                 key={event.id}
                 id={event.id}
                 ref={(el) => (eventRefs.current[index] = el)}
-                className="timeline-event min-h-screen flex flex-col justify-center items-center snap-start py-12"
+                className={`timeline-event min-h-screen flex flex-col justify-center items-center snap-start py-12 event-bg-${index}`}
+                initial={{ opacity: 0 }}
+                animate={visibleEvents[index] || false ? { opacity: 1 } : { opacity: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <div className="text-center mb-8 flex-shrink-0">
+                <motion.div
+                  className="text-center mb-8 flex-shrink-0"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={visibleEvents[index] || false ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
                   <h2 className="font-playfair text-4xl font-bold">{event.title}</h2>
                   <h3 className="text-xl text-gray-500 mt-2">{event.subtitle}</h3>
                   <p className="text-md text-gray-400 mt-1">{event.location}</p>
-                </div>
-                <div className="flex-1 flex items-center justify-center w-full max-w-4xl px-4">
-                  <div className={`grid grid-cols-1 md:grid-cols-${event.media.length > 2 ? 3 : 2} gap-8 items-center justify-items-center w-full`}>
-                    {event.media.map((src, i) => (
-                      <div
-                        key={i}
-                        className="relative w-[600px] h-[400px] max-w-full mx-auto polaroid flex-shrink-0"
-                        style={{ transform: `rotate(${i % 2 === 0 ? '-' : ''}${2 + Math.random() * 4}deg)` }}
-                      >
-                        <Image src={src} alt={event.title} fill className="object-cover rounded" />
-                        <p className="caption font-dancing-script text-xl">{event.title}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                </motion.div>
+                <PhotoDeck key={event.id} visible={visibleEvents[index] || false} images={event.media} caption={event.title} />
                 {event.description && (
-                  <div className="mt-8 flex-shrink-0 text-center text-lg max-w-xl mx-auto leading-relaxed px-4">
+                  <motion.div
+                    className="mt-8 flex-shrink-0 text-center text-lg max-w-xl mx-auto leading-relaxed px-4"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={visibleEvents[index] || false ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                  >
                     {event.description}
-                  </div>
+                  </motion.div>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Floating Navigation Arrows */}
-        <div 
-          id="up-arrow" 
-          className={`nav-arrow ${currentEventIndex > 0 ? 'visible' : ''}`}
+        <div
+          id="up-arrow"
+          className={`nav-arrow ${currentEventIndex >= 0 ? 'visible' : ''}`}
           onClick={scrollUp}
         >
           <svg className="w-12 h-12 text-white bg-black bg-opacity-40 rounded-full p-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7"></path>
           </svg>
         </div>
-        <div 
-          id="down-arrow" 
-          className={`nav-arrow ${currentEventIndex < config.timelineEvents.length - 1 && currentEventIndex !== -1 ? 'visible' : ''}`}
-          onClick={scrollDown}
+        <div
+          id="down-arrow"
+          className={`nav-arrow ${(currentEventIndex < config.timelineEvents.length - 1 || currentEventIndex === -1) ? 'visible' : ''}`}
+          onClick={currentEventIndex === -1 ? scrollToTimeline : scrollDown}
         >
           <svg className="w-12 h-12 text-white bg-black bg-opacity-40 rounded-full p-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>

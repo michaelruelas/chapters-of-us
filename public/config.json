@@ -1,11 +1,11 @@
 {
   "siteTitle": "Chapters of Us",
-  "anniversaryDate": "2013-09-21T12:00:00",
+  "anniversaryDate": "2011-09-25T12:00:00",
   "timelineEvents": [
     {
       "id": "event-1",
       "title": "Our First Date",
-      "subtitle": "September 21, 2013",
+      "subtitle": "August 13, 2011",
       "location": "The Little Cafe, Downtown",
       "description": "It all started with a cup of coffee. We talked for hours and it felt like minutes. I knew something special was beginning.",
       "media": [
@@ -16,13 +16,12 @@
     {
       "id": "event-2",
       "title": "The Proposal",
-      "subtitle": "June 5, 2015",
-      "location": "Sunset Point, National Park",
+      "subtitle": "August 13, 2011",
+      "location": "Lake Tahoe, CA",
       "description": "Under a sky painted with sunset colors, I asked, and you said yes. The happiest moment of my life, until our wedding day.",
       "media": [
-        "https://placehold.co/600x400/f0e6e6/5b6058?text=Proposal",
-        "https://placehold.co/600x400/d8c8c8/5b6058?text=The+Ring",
-        "https://placehold.co/600x400/c7b2b2/5b6058?text=Sunset"
+        "/images/proposal-1.jpg",
+        "/images/proposal-2.jpg"
       ]
     },
     {
@@ -56,6 +55,18 @@
       "media": [
         "https://placehold.co/600x400/d9e2d1/5b6058?text=Our+Home",
         "https://placehold.co/600x400/c6d6ba/5b6058?text=Front+Door"
+      ]
+    },
+    {
+      "id": "event-6",
+      "title": "Anniversary Celebration",
+      "subtitle": "September 25, 2025",
+      "location": "Home Sweet Home",
+      "description": "Celebrating 14 years of love with cherished memories.",
+      "media": [
+        "/images/proposal-1.jpg",
+        "/images/proposal-2.jpg",
+        "https://placehold.co/600x400/f5f1e8/5b6058?text=Anniversary"
       ]
     }
   ]
