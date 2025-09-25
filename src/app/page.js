@@ -117,36 +117,38 @@ export default function Home() {
         </aside>
 
         {/* Main Vertical Timeline */}
-        <div className="container mx-auto px-4 py-24 timeline-line relative">
-          <div className="max-w-3xl mx-auto space-y-32">
+        <div className="container mx-auto px-4 py-0 timeline-line relative snap-y snap-mandatory h-screen overflow-y-auto">
+          <div className="flex flex-col h-full">
             {config.timelineEvents.map((event, index) => (
               <div
                 key={event.id}
                 id={event.id}
                 ref={(el) => (eventRefs.current[index] = el)}
-                className="timeline-event"
+                className="timeline-event min-h-screen flex flex-col justify-center items-center snap-start py-12"
               >
-                <div className="text-center mb-12">
+                <div className="text-center mb-8 flex-shrink-0">
                   <h2 className="font-playfair text-4xl font-bold">{event.title}</h2>
                   <h3 className="text-xl text-gray-500 mt-2">{event.subtitle}</h3>
                   <p className="text-md text-gray-400 mt-1">{event.location}</p>
                 </div>
-                <div className={`grid grid-cols-1 md:grid-cols-${event.media.length > 2 ? 3 : 2} gap-8 items-center justify-items-center`}>
-                  {event.media.map((src, i) => (
-                    <div
-                      key={i}
-                      className="relative w-full max-w-xs polaroid"
-                      style={{ transform: `rotate(${i % 2 === 0 ? '-' : ''}${2 + Math.random() * 4}deg)` }}
-                    >
-                      <Image src={src} alt={event.title} fill className="object-cover" />
-                      <p className="caption font-dancing-script text-xl">{event.title}</p>
-                    </div>
-                  ))}
+                <div className="flex-1 flex items-center justify-center w-full max-w-4xl px-4">
+                  <div className={`grid grid-cols-1 md:grid-cols-${event.media.length > 2 ? 3 : 2} gap-8 items-center justify-items-center w-full`}>
+                    {event.media.map((src, i) => (
+                      <div
+                        key={i}
+                        className="relative w-full max-w-xs polaroid flex-shrink-0"
+                        style={{ transform: `rotate(${i % 2 === 0 ? '-' : ''}${2 + Math.random() * 4}deg)` }}
+                      >
+                        <Image src={src} alt={event.title} fill className="object-cover" />
+                        <p className="caption font-dancing-script text-xl">{event.title}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 {event.description && (
-                  <p className="mt-12 text-center text-lg max-w-xl mx-auto leading-relaxed">
+                  <div className="mt-8 flex-shrink-0 text-center text-lg max-w-xl mx-auto leading-relaxed px-4">
                     {event.description}
-                  </p>
+                  </div>
                 )}
               </div>
             ))}
