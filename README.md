@@ -30,13 +30,14 @@ The site is fully customizable via the `public/config.json` file and environment
 
 ### 1. config.json (Content & Events)
 
-Edit `public/config.json` for your story details. This loads dynamically.
+Edit `public/config.json` for your story details. This loads dynamically and drives metadata, titles, and content.
 
 #### Structure
 
 ```json
 {
-  "anniversaryDate": "2016-10-10",
+  "siteTitle": "Chapters of Us",
+  "anniversaryDate": "2013-09-21T12:00:00",
   "timelineEvents": [
     {
       "id": "event-1",
@@ -54,16 +55,24 @@ Edit `public/config.json` for your story details. This loads dynamically.
 }
 ```
 
-- **anniversaryDate**: Date in YYYY-MM-DD format (e.g., "2016-10-10"). Used to calculate years for the title screen (can be overridden via env).
+- **siteTitle** (optional): Base site title (e.g., "Chapters of Us"). Used for HTML `<title>`, meta tags, and dynamic browser tab titles. Defaults to "Chapters of Us" if omitted. Great for SEO and branding.
+- **anniversaryDate**: Date in ISO format (e.g., "2013-09-21T12:00:00"). Used to calculate years for the landing title (can be overridden via env).
 - **timelineEvents**: Array of events (5-10 recommended). Each includes:
   - **id** (required): Unique ID (e.g., "event-1") for navigation.
-  - **title** (required): Main heading (e.g., "Our First Date").
+  - **title** (required): Main heading (e.g., "Our First Date"). Also used in dynamic browser tab titles (e.g., "Our First Date - Chapters of Us").
   - **subtitle** (required): Date/tagline (e.g., "September 21, 2013").
   - **location** (required): Where it happened (e.g., "The Little Cafe, Downtown").
-  - **description** (required): Story text (1-3 sentences).
-  - **media** (required): 2-3 image URLs (e.g., Unsplash, ImgBB, or `/public/images/my-photo.jpg` for local). Render as polaroids.
+  - **description** (optional): Story text (1-3 sentences).
+  - **media** (required): 2-3 image URLs (e.g., Unsplash, ImgBB, or `/public/images/my-photo.jpg` for local). Render as polaroids. Supports JPG, PNG, SVG.
 
-After editing, restart `npm run dev` to see changes. Replace placeholders with real photos (high-res, 600x400+).
+After editing, restart `npm run dev` to see changes (including metadata updates). Replace placeholders with real photos (high-res, 600x400+ recommended).
+
+#### Metadata and Dynamic Titles
+- **Static Metadata**: The base `<title>` and `<meta description>` in the HTML head are generated from `siteTitle` and a fixed description ("Our love story through the years"). This improves SEO and social sharing previews.
+- **Dynamic Browser Tab Titles**: As you navigate:
+  - Landing: "Our Anniversary: 12 years! - Chapters of Us"
+  - Chapter/Event: "Our First Date - Chapters of Us" (updates on scroll/arrows/sidebar clicks).
+- View source (Ctrl+U) to see static metadata. Tab title changes in real-time for better UX.
 
 ### 2. Environment Variables (.env.local)
 
