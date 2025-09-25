@@ -16,7 +16,8 @@ export default function Home() {
       .then(data => {
         setConfig(data);
         const now = new Date();
-        const annivDate = new Date(data.anniversaryDate);
+        const annivDateStr = process.env.NEXT_PUBLIC_ANIVERSARY_DATE || data.anniversaryDate;
+        const annivDate = new Date(annivDateStr);
         const years = now.getFullYear() - annivDate.getFullYear();
         setAnniversaryYears(years);
       });
