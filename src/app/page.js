@@ -123,11 +123,11 @@ export default function Home() {
           <p className="font-dancing-script text-4xl md:text-6xl mt-4 mb-8">{anniversaryYears} years!</p>
           <button
             onClick={scrollToTimeline}
-            className="bg-[var(--primary)] text-[var(--topcoat-white)] font-semibold py-3 px-8 rounded-full shadow-md hover:bg-[var(--primary)/90] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--highlight)]"
+            className="bg-[var(--primary)] text-[var(--topcoat-white)] font-semibold py-3 px-8 rounded-full shadow-2xl hover:bg-[var(--primary)/90] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--highlight)]"
           >
             View Our Story
           </button>
-        </div>
+        </div>  
       </section>
 
       {/* Timeline Section */}

@@ -31,42 +31,88 @@
       "location": "The Grand Ballroom",
       "description": "Surrounded by family and friends, we promised forever. A day filled with love, laughter, and dancing.",
       "media": [
-        "https://placehold.co/600x400/f5f1e8/5b6058?text=Wedding",
-        "https://placehold.co/600x400/e8e2d3/5b6058?text=I+Do"
+        "/images/wedding-1.jpg",
+        "/images/wedding-2.jpg"
       ]
     },
     {
       "id": "event-4",
       "title": "Honeymoon in Paradise",
-      "subtitle": "October 12, 2016",
-      "location": "Maui, Hawaii",
-      "description": "Our first adventure as a married couple. Sandy toes, salty kisses, and unforgettable memories.",
+      "subtitle": "October 10, 2011",
+      "location": "Playa Hermosa, Costa Rica",
+      "description": "",
       "media": [
-        "https://placehold.co/600x400/c2d5d8/5b6058?text=Honeymoon",
-        "https://placehold.co/600x400/a3c4c9/5b6058?text=Beach+View"
+        "/images/honeymoon-1.jpg",
+        "/images/honeymoon-2.jpg"
       ]
     },
     {
       "id": "event-5",
-      "title": "Moved Into Our First Home",
-      "subtitle": "May 1, 2018",
-      "location": "123 Oak Street",
+      "title": "Moved Into Our Costa Rica Condo",
+      "subtitle": "October 12, 2011",
+      "location": "Los Anonos, Escazu, Costa Rica",
       "description": "The start of a new chapter. We turned a house into our home, one memory at a time.",
       "media": [
-        "https://placehold.co/600x400/d9e2d1/5b6058?text=Our+Home",
-        "https://placehold.co/600x400/c6d6ba/5b6058?text=Front+Door"
+        "/images/costa-rica-home-1.jpg",
+        "/images/costa-rica-home-2.jpg"
       ]
     },
     {
       "id": "event-6",
-      "title": "Anniversary Celebration",
-      "subtitle": "September 25, 2025",
-      "location": "Home Sweet Home",
-      "description": "Celebrating 14 years of love with cherished memories.",
+      "title": "1st Anniversary - Europe Trip",
+      "subtitle": "September 19, 2012",
+      "location": "Europe",
+      "description": "Traveled through Europe, exploring new cultures and creating unforgettable memories together.",
       "media": [
-        "/images/proposal-1.jpg",
-        "/images/proposal-2.jpg",
-        "https://placehold.co/600x400/f5f1e8/5b6058?text=Anniversary"
+        "/images/europe-1.jpg",
+        "/images/europe-2.jpg",
+        "/images/europe-3.jpg"
+      ]
+    },
+    {
+      "id": "event-7",
+      "title": "1st Home - Raisina",
+      "subtitle": "December 7, 2012",
+      "location": "Fresno, CA",
+      "description": "Purchased our dream home in Fresno in our move back to the US.",
+      "media": [
+        "/images/first-home-1.jpg",
+        "/images/first-home-2.jpg"
+      ]
+    },
+    {
+      "id": "event-8",
+      "title": "Adopted Chloe and Maddie",
+      "subtitle": "March 21, 2014",
+      "location": "Fresno, CA",
+      "description": "Our family grew by two girls - Chloe and Maddie. They bring so much joy and love into our lives.",
+      "media": [
+        "/images/adopted-girls-1.jpg",
+        "/images/adopted-girls-2.jpg",
+        "/images/adopted-girls-3.jpg"
+      ]
+    },
+    {
+      "id": "event-9",
+      "title": "Adopted Oliver",
+      "subtitle": "August 30, 2014",
+      "location": "Fresno, CA",
+      "description": "Our family grew by one more - Oliver. He completes our little family and fills our home with laughter.",
+      "media": [
+        "/images/oliver-1.jpg",
+        "/images/oliver-2.jpg"
+      ]
+    },
+    {
+      "id": "event-10",
+      "title": "Bought Kaweah House",
+      "subtitle": "August 31, 2015",
+      "location": "Clovis, CA",
+      "description": "We decided to expand to a bigger home to accommodate our growing family.",
+      "media": [
+        "/images/kaweah-1.jpg",
+        "/images/kaweah-2.jpg",
+        "/images/kaweah-3.jpg"
       ]
     }
   ]

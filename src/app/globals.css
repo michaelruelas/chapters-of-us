@@ -9,7 +9,7 @@
   --topcoat-white: #FFFFFF;
   --topcoat-gray: #f5f5f5;
   --text-gray: #4A4A4A;
-  --shadow-primary: 0 12.5px 100px -10px rgba(156, 175, 151, 0.4), 0 10px 10px -10px rgba(156, 175, 151, 0.3);
+  --shadow-primary: 0 12.5px 100px -10px rgba(156, 175, 151, 0.75), 0 10px 10px -10px rgba(156, 175, 151, 0.5);
   --event-bg-0: color-mix(in srgb, var(--topcoat-white) 95% var(--primary));
   --event-bg-1: color-mix(in srgb, var(--topcoat-white) 90% var(--primary));
   --event-bg-2: color-mix(in srgb, var(--topcoat-white) 85% var(--primary));
@@ -24,7 +24,7 @@
   --highlight: #A18A5F;
   --topcoat-white: #FFFFFF;
   --text-gray: #4A4A4A;
-  --shadow-primary: 0 12.5px 100px -10px rgba(156, 175, 151, 0.4), 0 10px 10px -10px rgba(156, 175, 151, 0.3);
+  --shadow-primary: 0 12.5px 100px -10px rgba(156, 175, 151, 0.75), 0 10px 10px -10px rgba(156, 175, 151, 0.5);
   --event-bg-0: color-mix(in srgb, var(--topcoat-white) 95% var(--primary));
   --event-bg-1: color-mix(in srgb, var(--topcoat-white) 90% var(--primary));
   --event-bg-2: color-mix(in srgb, var(--topcoat-white) 85% var(--primary));
@@ -126,7 +126,7 @@ body {
 
 .nav-arrow {
   position: fixed;
-  left: 98%;
+  right: 1%;
   transform: translateX(-50%);
   z-index: 20;
   cursor: pointer;

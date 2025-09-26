@@ -12,36 +12,38 @@ const PhotoDeck = ({ visible = false, images, caption, className = '' }) => {
     const baseHeight = 450;
     let x, y, scale, rotate, zIndex, transform;
 
-    y = '0%'; // No top offset
+    y = '10%'; // No top offset
 
     if (cardCount === 2) {
       scale = 0.9;
       if (index === 0) {
-        x = '20%';
+        x = '30%';
         rotate = -3;
         zIndex = 1;
         transform = 'translateX(15%) translateY(50%)';
       } else {
-        x = '80%';
+        x = '50%';
         rotate = 3;
         zIndex = 2;
         transform = 'translateX(-15%) translateY(50%)';
       }
     } else if (cardCount === 3) {
       if (index === 0) { // Left
-        x = '15%';
+        x = '22%';
+        y = '5%';
         scale = 0.8;
         rotate = -3;
         zIndex = 1;
         transform = 'translateX(25%) translateY(40%)';
       } else if (index === 1) { // Center
-        x = '50%';
+        x = '40%';
         scale = 1.0;
         rotate = 0;
         zIndex = 3;
         transform = 'translateX(0%) translateY(50%)';
       } else { // Right
-        x = '85%';
+        x = '64%';
+        y = '8%';
         scale = 0.8;
         rotate = 3;
         zIndex = 2;
@@ -128,7 +130,7 @@ const PhotoDeck = ({ visible = false, images, caption, className = '' }) => {
             initial="initial"
             animate={visible ? "visible" : "initial"}
           >
-            <div className="relative w-full h-full border-8 border-white border-b-16 rounded shadow-2xl bg-white">
+            <div className="relative w-full h-full border-8 border-white border-b-16 rounded bg-white">
               <Image
                 src={src}
                 alt={`${caption} - ${i + 1}`}
@@ -137,7 +139,6 @@ const PhotoDeck = ({ visible = false, images, caption, className = '' }) => {
                 priority={i === 0}
               />
             </div>
-            <p className="caption mt-2 text-center font-dancing-script text-xl">{caption}</p>
           </motion.div>
         );
       })}
