@@ -3,6 +3,64 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #9CAF97;
+  --secondary: #E6E1D8;
+  --highlight: #A18A5F;
+  --topcoat-white: #FFFFFF;
+  --topcoat-gray: #f5f5f5;
+  --text-gray: #4A4A4A;
+  --shadow-primary: 0 12.5px 100px -10px rgba(156, 175, 151, 0.4), 0 10px 10px -10px rgba(156, 175, 151, 0.3);
+  --event-bg-0: color-mix(in srgb, var(--topcoat-white) 95% var(--primary));
+  --event-bg-1: color-mix(in srgb, var(--topcoat-white) 90% var(--primary));
+  --event-bg-2: color-mix(in srgb, var(--topcoat-white) 85% var(--primary));
+  --event-bg-3: color-mix(in srgb, var(--topcoat-white) 80% var(--primary));
+  --event-bg-4: color-mix(in srgb, var(--topcoat-white) 75% var(--primary));
+  --event-bg-5: color-mix(in srgb, var(--topcoat-white) 70% var(--primary));
+}
+
+.theme-sage {
+  --primary: #9CAF97;
+  --secondary: #E6E1D8;
+  --highlight: #A18A5F;
+  --topcoat-white: #FFFFFF;
+  --text-gray: #4A4A4A;
+  --shadow-primary: 0 12.5px 100px -10px rgba(156, 175, 151, 0.4), 0 10px 10px -10px rgba(156, 175, 151, 0.3);
+  --event-bg-0: color-mix(in srgb, var(--topcoat-white) 95% var(--primary));
+  --event-bg-1: color-mix(in srgb, var(--topcoat-white) 90% var(--primary));
+  --event-bg-2: color-mix(in srgb, var(--topcoat-white) 85% var(--primary));
+  --event-bg-3: color-mix(in srgb, var(--topcoat-white) 80% var(--primary));
+  --event-bg-4: color-mix(in srgb, var(--topcoat-white) 75% var(--primary));
+  --event-bg-5: color-mix(in srgb, var(--topcoat-white) 70% var(--primary));
+}
+
+.theme-navy {
+  --primary: #1A293E;
+  --secondary: #F5F7F8;
+  --highlight: #A88B4C;
+  --topcoat-white: #F5F7F8;
+  --text-gray: #000000;
+  --shadow-primary: 0 12.5px 100px -10px rgba(26, 41, 62, 0.4), 0 10px 10px -10px rgba(26, 41, 62, 0.3);
+  --event-bg-0: color-mix(in srgb, var(--topcoat-white) 95% var(--primary));
+  --event-bg-1: color-mix(in srgb, var(--topcoat-white) 90% var(--primary));
+  --event-bg-2: color-mix(in srgb, var(--topcoat-white) 85% var(--primary));
+  --event-bg-3: color-mix(in srgb, var(--topcoat-white) 80% var(--primary));
+  --event-bg-4: color-mix(in srgb, var(--topcoat-white) 75% var(--primary));
+  --event-bg-5: color-mix(in srgb, var(--topcoat-white) 70% var(--primary));
+}
+
+.theme-gray {
+  --primary: #333333;
+  --secondary: #F2F2F2;
+  --highlight: #C0C0C0;
+  --topcoat-white: #FFFFFF;
+  --text-gray: #333333;
+  --shadow-primary: 0 12.5px 100px -10px rgba(51, 51, 51, 0.4), 0 10px 10px -10px rgba(51, 51, 51, 0.3);
+  --event-bg-0: color-mix(in srgb, var(--topcoat-white) 95% var(--primary));
+  --event-bg-1: color-mix(in srgb, var(--topcoat-white) 90% var(--primary));
+  --event-bg-2: color-mix(in srgb, var(--topcoat-white) 85% var(--primary));
+  --event-bg-3: color-mix(in srgb, var(--topcoat-white) 80% var(--primary));
+  --event-bg-4: color-mix(in srgb, var(--topcoat-white) 75% var(--primary));
+  --event-bg-5: color-mix(in srgb, var(--topcoat-white) 70% var(--primary));
 }
 
 @theme inline {
@@ -10,18 +68,19 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-highlight: var(--highlight);
+  --color-topcoat-white: var(--topcoat-white);
+  --color-topcoat-gray: var(--topcoat-gray);
+  --color-text-gray: var(--text-gray);
+  --shadow-primary: var(--shadow-primary);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--secondary);
+  color: var(--text-gray);
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
@@ -43,11 +102,11 @@ body {
 
 
 .polaroid {
-  background: white;
+  background: var(--topcoat-white);
   border-radius: 4px;
-  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
-  border: 1em solid white;
-  border-bottom: 4em solid white;
+  box-shadow: var(--shadow-primary);
+  border: 1em solid var(--topcoat-white);
+  border-bottom: 4em solid var(--topcoat-white);
 }
 
 .polaroid .caption {
@@ -55,13 +114,13 @@ body {
   font-size: 1.25rem;
   text-align: center;
   margin-top: 0.5rem;
-  color: #474747;
+  color: var(--highlight);
 }
 
 .timeline-nav-dot.active {
-  background-color: #2563eb;
+  background-color: var(--primary);
   transform: scale(1.5);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 12px rgba(var(--highlight-rgb), 0.4);
   transition: all 0.3s ease;
 }
 
@@ -72,7 +131,7 @@ body {
   z-index: 20;
   cursor: pointer;
   opacity: 0.5;
-  color: var(--color-foreground);
+  color: var(--topcoat-white);
   transition: opacity 0.3s ease;
 }
 
@@ -93,25 +152,25 @@ body {
 }
 
 .event-bg-0 {
-  background-color: #FFF8F0;
+  background-color: var(--event-bg-0);
 }
 
 .event-bg-1 {
-  background-color: #F8F0E8;
+  background-color: var(--event-bg-1);
 }
 
 .event-bg-2 {
-  background-color: #F0E8E0;
+  background-color: var(--event-bg-2);
 }
 
 .event-bg-3 {
-  background-color: #E8E0D8;
+  background-color: var(--event-bg-3);
 }
 
 .event-bg-4 {
-  background-color: #E0D8D0;
+  background-color: var(--event-bg-4);
 }
 
 .event-bg-5 {
-  background-color: #D8D0C8;
+  background-color: var(--event-bg-5);
 }
