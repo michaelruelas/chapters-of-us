@@ -12,6 +12,12 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals"),
   {
+    rules: {
+      'react/display-name': 'off',
+      'react-hooks/exhaustive-deps': 'off',
+    },
+  },
+  {
     ignores: [
       "node_modules/**",
       ".next/**",

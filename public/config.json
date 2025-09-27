@@ -4,13 +4,13 @@
   "timelineEvents": [
     {
       "id": "event-1",
-      "title": "Our First Date",
-      "subtitle": "August 13, 2011",
-      "location": "The Little Cafe, Downtown",
-      "description": "It all started with a cup of coffee. We talked for hours and it felt like minutes. I knew something special was beginning.",
+      "title": "Met at Work",
+      "subtitle": "August 13, 2010",
+      "location": "Fresno, CA",
+      "description": "Our journey began at SermonSpice.com, where a chance meeting turned into a beautiful relationship.",
       "media": [
-        "https://placehold.co/600x400/d1d4c9/5b6058?text=First+Date",
-        "https://placehold.co/600x400/e0dace/5b6058?text=Coffee"
+        "/images/sermonspice-1.jpg",
+        "/images/sermonspice-2.jpg"
       ]
     },
     {
@@ -18,7 +18,7 @@
       "title": "The Proposal",
       "subtitle": "August 13, 2011",
       "location": "Lake Tahoe, CA",
-      "description": "Under a sky painted with sunset colors, I asked, and you said yes. The happiest moment of my life, until our wedding day.",
+      "description": "A magical evening by the lake. With the sun setting and the mountains as our backdrop, I asked the love of my life to be mine forever.",
       "media": [
         "/images/proposal-1.jpg",
         "/images/proposal-2.jpg"
@@ -28,7 +28,7 @@
       "id": "event-3",
       "title": "Our Wedding Day",
       "subtitle": "September 25, 2011",
-      "location": "The Grand Ballroom",
+      "location": "Prather, CA",
       "description": "Surrounded by family and friends, we promised forever. A day filled with love, laughter, and dancing.",
       "media": [
         "/images/wedding-1.jpg",
@@ -105,7 +105,7 @@
     },
     {
       "id": "event-10",
-      "title": "Bought Kaweah House",
+      "title": "Built Kaweah House",
       "subtitle": "August 31, 2015",
       "location": "Clovis, CA",
       "description": "We decided to expand to a bigger home to accommodate our growing family.",
@@ -113,6 +113,189 @@
         "/images/kaweah-1.jpg",
         "/images/kaweah-2.jpg",
         "/images/kaweah-3.jpg"
+      ]
+    },
+    {
+      "id": "event-11",
+      "title": "Diagnosed with Brain Tumors",
+      "subtitle": "December 22, 2016",
+      "location": "Fresno, CA",
+      "description": "A challenging time in our lives, but we faced it together with strength and love.",
+      "media": [
+        "/images/brain-tumors-1.jpg",
+        "/images/brain-tumors-2.jpg"
+      ]
+    },
+    {
+      "id": "event-12",
+      "title": "6th Wedding Anniversary",
+      "subtitle": "September 22, 2017",
+      "location": "Arroyo Grande, CA",
+      "description": "Celebrating our anniversary with a weekend getaway to the coast and stayed at a castle.",
+      "media": [
+        "/images/anniversary-6th-1.jpg",
+        "/images/anniversary-6th-2.jpg",
+        "/images/anniversary-6th-3.jpg"
+      ]
+    },
+    {
+      "id": "event-13",
+      "title": "Move to Seattle",
+      "subtitle": "April 25, 2018",
+      "location": "Seattle, WA",
+      "description": "We moved our family to Seattle for new opportunities and adventures.",
+      "media": [
+        "/images/seattle-move-1.jpg",
+        "/images/seattle-move-2.jpg",
+        "/images/seattle-move-3.jpg"
+      ]
+    },
+    {
+      "id": "event-14",
+      "title": "Radiation Treatment",
+      "subtitle": "August 19, 2018",
+      "location": "Seattle, WA",
+      "description": "Completed radiation treatment successfully. A tough journey, but we came out stronger.",
+      "media": [
+        "/images/radiation-1.jpg",
+        "/images/radiation-2.jpg"
+      ]
+    },
+    {
+      "id": "event-15",
+      "title": "7th Wedding Anniversary",
+      "subtitle": "September 29, 2018",
+      "location": "Seattle, WA",
+      "description": "Celebrated with a morning brunch cruise, Romanian festival in the afternoon, and comedy clutch at night.",
+      "media": [
+        "/images/anniversary-7th-1.jpg",
+        "/images/anniversary-7th-3.jpg",
+        "/images/anniversary-7th-2.jpg"
+      ]
+    },
+    {
+      "id": "event-16",
+      "title": "Moved Back to California",
+      "subtitle": "July 6, 2020",
+      "location": "Seattle, WA - Fresno, CA",
+      "description": "",
+      "media": [
+        "/images/fresno-move-1.jpg",
+        "/images/fresno-move-2.jpg",
+        "/images/fresno-move-3.jpg"
+      ]
+    },
+    {
+      "id": "event-17",
+      "title": "9th Wedding Anniversary",
+      "subtitle": "August 22, 2020",
+      "location": "Cayucos, CA",
+      "description": "",
+      "media": [
+        "/images/anniversary-9th-1.jpg",
+        "/images/anniversary-9th-2.jpg"
+      ]
+    },
+    {
+      "id": "event-18",
+      "title": "Adopted Winston",
+      "subtitle": "December 29, 2020",
+      "location": "Carson, CA",
+      "description": "",
+      "media": [
+        "/images/adopted-winston-1.jpg",
+        "/images/adopted-winston-2.jpg"
+      ]
+    },
+    {
+      "id": "event-19",
+      "title": "Bought Kaweah House Again",
+      "subtitle": "June 17, 2021",
+      "location": "Clovis, CA",
+      "description": "",
+      "media": [
+        "/images/kaweah-house-1.jpg",
+        "/images/kaweah-house-2.jpg"
+      ]
+    },
+    {
+      "id": "event-20",
+      "title": "10th Wedding Anniversary",
+      "subtitle": "September 24, 2021",
+      "location": "Huntington Beach, CA",
+      "description": "",
+      "media": [
+        "/images/anniversary-10th-1.jpg",
+        "/images/anniversary-10th-2.jpg",
+        "/images/anniversary-10th-3.jpg"
+      ]
+    },
+    {
+      "id": "event-21",
+      "title": "11th Wedding Anniversary",
+      "subtitle": "September 24, 2021",
+      "location": "Huntington Beach, CA",
+      "description": "",
+      "media": [
+        "/images/anniversary-11th-1.jpg",
+        "/images/anniversary-11th-2.jpg",
+        "/images/anniversary-11th-3.jpg"
+      ]
+    },
+    {
+      "id": "event-22",
+      "title": "12th Wedding Anniversary",
+      "subtitle": "September 24, 2023",
+      "location": "San Diego, CA",
+      "description": "",
+      "media": [
+        "/images/anniversary-12th-1.jpg",
+        "/images/anniversary-12th-2.jpg"
+      ]
+    },
+    {
+      "id": "event-23",
+      "title": "Hawaii Birthday Trip",
+      "subtitle": "December 25, 2023",
+      "location": "Kauai, HI",
+      "description": "",
+      "media": [
+        "/images/hawaii-birthday-1.jpg",
+        "/images/hawaii-birthday-2.jpg",
+        "/images/hawaii-birthday-3.jpg"
+      ]
+    },
+    {
+      "id": "event-24",
+      "title": "Separation",
+      "subtitle": "December 25, 2024",
+      "location": "Clovis, CA",
+      "description": "",
+      "media": [
+        "/images/separation-1.jpg",
+        "/images/separation-2.jpg"
+      ]
+    },
+    {
+      "id": "event-25",
+      "title": "Reunited",
+      "subtitle": "November 7, 2024",
+      "location": "Clovis, CA",
+      "description": "",
+      "media": [
+        "/images/reunited-1.jpg",
+        "/images/reunited-2.jpg"
+      ]
+    },
+    {
+      "id": "event-26",
+      "title": "14th Wedding Anniversary",
+      "subtitle": "September 26, 2025",
+      "location": "Palm Springs, CA",
+      "description": "",
+      "media": [
+        "/images/anniversary-14th-1.jpg",
+        "/images/anniversary-14th-2.jpg"
       ]
     }
   ]

@@ -131,16 +131,16 @@ export default function Home() {
       </section>
 
       {/* Timeline Section */}
-      <main ref={timelineRef} className="relative overflow-hidden">
+      <main ref={timelineRef} className="relative">
         {/* Timeline Navigation (Side) - Desktop */}
-        <aside className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 hidden md:block">
-          <div className="flex flex-col items-center space-y-6">
+        <aside className="fixed right-4 md:right-15 top-1/2 -translate-y-1/2 z-20 hidden md:block">
+          <div className="flex flex-col items-center space-y-4">
             {config.timelineEvents.map((event, index) => (
               <div key={event.id} className="relative group">
                 <a 
                   href={`#${event.id}`}
                   onClick={(e) => { e.preventDefault(); scrollToEvent(index); }}
-                  className={`block w-4 h-4 bg-[var(--topcoat-gray)] rounded-full timeline-nav-dot ${currentEventIndex === index ? 'active' : ''}`}
+                  className={`block w-2 h-2 bg-[var(--topcoat-gray)] rounded-full timeline-nav-dot ${currentEventIndex === index ? 'active' : ''}`}
                 ></a>
                 <div className="absolute right-full top-1/2 -translate-y-1/2 mr-4 px-3 py-1 bg-[var(--primary)] text-[var(--topcoat-white)] text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                   {event.title}

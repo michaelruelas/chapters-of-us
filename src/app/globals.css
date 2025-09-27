@@ -99,8 +99,6 @@ body {
   background-position: center;
 }
 
-
-
 .polaroid {
   background: var(--topcoat-white);
   border-radius: 4px;
@@ -113,13 +111,13 @@ body {
   font-family: 'Dancing Script', cursive;
   font-size: 1.25rem;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   color: var(--highlight);
 }
 
 .timeline-nav-dot.active {
   background-color: var(--primary);
-  transform: scale(1.5);
+  transform: scale(0.75);
   box-shadow: 0 4px 12px rgba(var(--highlight-rgb), 0.4);
   transition: all 0.3s ease;
 }
@@ -144,11 +142,11 @@ body {
 }
 
 #up-arrow {
-  top: 5%;
+  top: 2%;
 }
 
 #down-arrow {
-  bottom: 5%;
+  bottom: 2%;
 }
 
 .event-bg-0 {

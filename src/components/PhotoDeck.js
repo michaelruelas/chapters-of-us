@@ -103,7 +103,7 @@ const PhotoDeck = ({ visible = false, images, caption, className = '' }) => {
 
   return (
     <motion.div
-      className={`relative w-full h-screen overflow-hidden flex items-center justify-center ${className}`}
+      className={`relative w-full h-screen flex items-center justify-center ${className}`}
       variants={containerVariants}
       initial="initial"
       animate={visible ? "visible" : "initial"}
