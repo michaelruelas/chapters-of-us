@@ -122,5 +122,5 @@ For homelab deployment, build with `bun run build` and serve the `/out` director
 
 ## Attributions
 
-- **Landing Page Background**: [Unsplash - Sandy dunes with distant mountains](https://unsplash.com/photos/sandy-dunes-with-distant-mountains-under-a-hazy-sky-hFXKUCTWEMIz)
+- **Landing Page Background**: [Unsplash - A lone vehicle drives across vast white sand dunes](https://unsplash.com/photos/a-lone-vehicle-drives-across-vast-white-sand-dunes-caTXL5CVRcQ)
 - **Placeholder Images**: [Doodle Ipsum](https://doodleipsum.com/)
