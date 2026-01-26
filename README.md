@@ -2,7 +2,7 @@
 
 Create a beautiful, responsive vertical timeline of your love story. Perfect for anniversaries, featuring a vintage polaroid aesthetic with mobile-first design, immersive landing page, and interactive navigation.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QXbxt-0gaMI?si=xGY_sY69ACCMpeGK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+https://github.com/user-attachments/assets/6329df45-7a1a-42e4-9551-3830ae38883d
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
