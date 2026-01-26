@@ -1,6 +1,8 @@
-# chapters-of-us
+# Chapters of Us
 
 Create a beautiful, responsive vertical timeline of your love story. Perfect for anniversaries, featuring a vintage polaroid aesthetic with mobile-first design, immersive landing page, and interactive navigation.
+
+![Demo Image](demo-image.png)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -117,3 +119,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 For homelab deployment, build with `bun run build` and serve the `/out` directory with a static server (e.g., nginx) or use `bun run start` after building.
+
+## Attributions
+
+- **Landing Page Background**: [Unsplash - Sandy dunes with distant mountains](https://unsplash.com/photos/sandy-dunes-with-distant-mountains-under-a-hazy-sky-hFXKUCTWEMIz)
+- **Placeholder Images**: [Doodle Ipsum](https://doodleipsum.com/)
