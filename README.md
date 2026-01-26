@@ -9,13 +9,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -65,7 +59,7 @@ Edit `public/config.json` for your story details. This loads dynamically and dri
   - **description** (optional): Story text (1-3 sentences).
   - **media** (required): 2-3 image URLs (e.g., Unsplash, ImgBB, or `/public/images/my-photo.jpg` for local). Render as polaroids. Supports JPG, PNG, SVG.
 
-After editing, restart `npm run dev` to see changes (including metadata updates). Replace placeholders with real photos (high-res, 600x400+ recommended).
+After editing, restart `bun run dev` to see changes (including metadata updates). Replace placeholders with real photos (high-res, 600x400+ recommended).
 
 #### Metadata and Dynamic Titles
 - **Static Metadata**: The base `<title>` and `<meta description>` in the HTML head are generated from `siteTitle` and a fixed description ("Our love story through the years"). This improves SEO and social sharing previews.
@@ -104,7 +98,7 @@ NEXT_PUBLIC_ANIVERSARY_DATE=2013-09-21
 - **Notes**:
   - `NEXT_PUBLIC_` vars are client-side (browser-safe).
   - For CORS/iframes: Add `--hostname 0.0.0.0` to `package.json` dev script.
-  - Testing: Change PORT, restart `npm run dev`, visit new URL. Year updates via env override.
+  - Testing: Change PORT, restart `bun run dev`, visit new URL. Year updates via env override.
   - Production: Set vars in deploy platform (Vercel dashboard) or server env (nginx/Docker).
 
 ## Learn More
@@ -122,4 +116,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-For homelab deployment, build with `npm run build` and serve the `/out` directory with a static server (e.g., nginx) or use `npm run start` after building.
+For homelab deployment, build with `bun run build` and serve the `/out` directory with a static server (e.g., nginx) or use `bun run start` after building.

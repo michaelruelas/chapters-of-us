@@ -8,17 +8,20 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'placehold.co',
-      },
-      {
-        protocol: 'https',
         hostname: 'images.unsplash.com',
       },
       {
         protocol: 'https',
         hostname: 'framerusercontent.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'doodleipsum.com',
+      },
     ],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 }
 

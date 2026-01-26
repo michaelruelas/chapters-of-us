@@ -116,18 +116,18 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Landing Screen */}
-      <section className="h-screen w-full flex flex-col items-center justify-center text-center p-4 text-[var(--topcoat-white)] landing-screen relative">
+      <section className="h-screen w-full flex flex-col items-center justify-center text-center p-4 text-[var(--text-gray)] landing-screen relative">
         <div className="absolute inset-0 bg-[var(--primary)/40]"></div>
         <div className="relative z-10">
-          <h1 className="font-playfair text-5xl md:text-7xl font-bold tracking-tight">Our Anniversary</h1>
-          <p className="font-dancing-script text-4xl md:text-6xl mt-4 mb-8">{anniversaryYears} years!</p>
+          <h1 className="font-playfair text-5xl md:text-7xl font-bold tracking-tight">{config.landingTitle || "Our Story"}</h1>
+          <p className="font-dancing-script text-4xl md:text-6xl mt-4 mb-8">{anniversaryYears} {config.landingSubtitle || "years"}</p>
           <button
             onClick={scrollToTimeline}
             className="bg-[var(--primary)] text-[var(--topcoat-white)] font-semibold py-3 px-8 rounded-full shadow-2xl hover:bg-[var(--primary)/90] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--highlight)]"
           >
             View Our Story
           </button>
-        </div>  
+        </div>
       </section>
 
       {/* Timeline Section */}
@@ -137,7 +137,7 @@ export default function Home() {
           <div className="flex flex-col items-center space-y-4">
             {config.timelineEvents.map((event, index) => (
               <div key={event.id} className="relative group">
-                <a 
+                <a
                   href={`#${event.id}`}
                   onClick={(e) => { e.preventDefault(); scrollToEvent(index); }}
                   className={`block w-2 h-2 bg-[var(--topcoat-gray)] rounded-full timeline-nav-dot ${currentEventIndex === index ? 'active' : ''}`}

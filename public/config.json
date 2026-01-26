@@ -1,301 +1,74 @@
 {
   "siteTitle": "Chapters of Us",
-  "anniversaryDate": "2011-09-25T12:00:00",
+  "landingTitle": "Chapters of Us",
+  "landingSubtitle": "years of love, growth, and adventure",
+  "anniversaryDate": "2015-06-15T12:00:00",
   "timelineEvents": [
     {
       "id": "event-1",
-      "title": "Met at Work",
-      "subtitle": "August 13, 2010",
-      "location": "Fresno, CA",
-      "description": "Our journey began at SermonSpice.com, where a chance meeting turned into a beautiful relationship.",
+      "title": "First Met",
+      "subtitle": "June 15, 2014",
+      "location": "Coffee Shop, City",
+      "description": "It all started with a simple cup of coffee. We talked for hours and realized we had so much in common.",
       "media": [
-        "/images/sermonspice-1.jpg",
-        "/images/sermonspice-2.jpg"
+        "https://doodleipsum.com/700x500/abstract?n=1&bg=ceebff",
+        "https://doodleipsum.com/700x500/abstract?n=2&bg=ceebff"
       ]
     },
     {
       "id": "event-2",
-      "title": "The Proposal",
-      "subtitle": "August 13, 2011",
-      "location": "Lake Tahoe, CA",
-      "description": "A magical evening by the lake. With the sun setting and the mountains as our backdrop, I asked the love of my life to be mine forever.",
+      "title": "She Said Yes",
+      "subtitle": "June 15, 2015",
+      "location": "Sunset Beach",
+      "description": "Under a beautiful sunset, I got down on one knee and asked the most important question of my life.",
       "media": [
-        "/images/proposal-1.jpg",
-        "/images/proposal-2.jpg"
+        "https://doodleipsum.com/700x500/abstract?n=3&bg=ceebff",
+        "https://doodleipsum.com/700x500/abstract?n=4&bg=ceebff"
       ]
     },
     {
       "id": "event-3",
-      "title": "Our Wedding Day",
-      "subtitle": "September 25, 2011",
-      "location": "Prather, CA",
-      "description": "Surrounded by family and friends, we promised forever. A day filled with love, laughter, and dancing.",
+      "title": "Our Big Day",
+      "subtitle": "August 20, 2016",
+      "location": "Grand Hotel",
+      "description": "Surrounded by our friends and family, we tied the knot and celebrated our love.",
       "media": [
-        "/images/wedding-1.jpg",
-        "/images/wedding-2.jpg"
+        "https://doodleipsum.com/700x500/abstract?n=5&bg=ceebff",
+        "https://doodleipsum.com/700x500/abstract?n=6&bg=ceebff"
       ]
     },
     {
       "id": "event-4",
-      "title": "Honeymoon in Paradise",
-      "subtitle": "October 10, 2011",
-      "location": "Playa Hermosa, Costa Rica",
-      "description": "",
+      "title": "First Trip Together",
+      "subtitle": "December 10, 2016",
+      "location": "Paris, France",
+      "description": "Our first international trip as a married couple. The city of lights was truly magical.",
       "media": [
-        "/images/honeymoon-1.jpg",
-        "/images/honeymoon-2.jpg"
+        "https://doodleipsum.com/700x500/abstract?n=7&bg=ceebff",
+        "https://doodleipsum.com/700x500/abstract?n=8&bg=ceebff",
+        "https://doodleipsum.com/700x500/abstract?n=9&bg=ceebff"
       ]
     },
     {
       "id": "event-5",
-      "title": "Moved Into Our Costa Rica Condo",
-      "subtitle": "October 12, 2011",
-      "location": "Los Anonos, Escazu, Costa Rica",
-      "description": "The start of a new chapter. We turned a house into our home, one memory at a time.",
+      "title": "Our New Home",
+      "subtitle": "March 15, 2018",
+      "location": "The Suburbs",
+      "description": "We bought our first house! It needed some work, but we made it our own.",
       "media": [
-        "/images/costa-rica-home-1.jpg",
-        "/images/costa-rica-home-2.jpg"
+        "https://doodleipsum.com/700x500/abstract?n=10&bg=ceebff",
+        "https://doodleipsum.com/700x500/abstract?n=11&bg=ceebff"
       ]
     },
     {
       "id": "event-6",
-      "title": "1st Anniversary - Europe Trip",
-      "subtitle": "September 19, 2012",
-      "location": "Europe",
-      "description": "Traveled through Europe, exploring new cultures and creating unforgettable memories together.",
+      "title": "10 Years Later",
+      "subtitle": "June 15, 2024",
+      "location": "Home",
+      "description": "A decade of memories, laughter, and love. Here's to many more years together.",
       "media": [
-        "/images/europe-1.jpg",
-        "/images/europe-2.jpg",
-        "/images/europe-3.jpg"
-      ]
-    },
-    {
-      "id": "event-7",
-      "title": "1st Home - Raisina",
-      "subtitle": "December 7, 2012",
-      "location": "Fresno, CA",
-      "description": "Purchased our dream home in Fresno in our move back to the US.",
-      "media": [
-        "/images/first-home-1.jpg",
-        "/images/first-home-2.jpg"
-      ]
-    },
-    {
-      "id": "event-8",
-      "title": "Adopted Chloe and Maddie",
-      "subtitle": "March 21, 2014",
-      "location": "Fresno, CA",
-      "description": "Our family grew by two girls - Chloe and Maddie. They bring so much joy and love into our lives.",
-      "media": [
-        "/images/adopted-girls-1.jpg",
-        "/images/adopted-girls-2.jpg",
-        "/images/adopted-girls-3.jpg"
-      ]
-    },
-    {
-      "id": "event-9",
-      "title": "Adopted Oliver",
-      "subtitle": "August 30, 2014",
-      "location": "Fresno, CA",
-      "description": "Our family grew by one more - Oliver. He completes our little family and fills our home with laughter.",
-      "media": [
-        "/images/oliver-1.jpg",
-        "/images/oliver-2.jpg"
-      ]
-    },
-    {
-      "id": "event-10",
-      "title": "Built Kaweah House",
-      "subtitle": "August 31, 2015",
-      "location": "Clovis, CA",
-      "description": "We decided to expand to a bigger home to accommodate our growing family.",
-      "media": [
-        "/images/kaweah-1.jpg",
-        "/images/kaweah-2.jpg",
-        "/images/kaweah-3.jpg"
-      ]
-    },
-    {
-      "id": "event-11",
-      "title": "Diagnosed with Brain Tumors",
-      "subtitle": "December 22, 2016",
-      "location": "Fresno, CA",
-      "description": "A challenging time in our lives, but we faced it together with strength and love.",
-      "media": [
-        "/images/brain-tumors-1.jpg",
-        "/images/brain-tumors-2.jpg"
-      ]
-    },
-    {
-      "id": "event-12",
-      "title": "6th Wedding Anniversary",
-      "subtitle": "September 22, 2017",
-      "location": "Arroyo Grande, CA",
-      "description": "Celebrating our anniversary with a weekend getaway to the coast and stayed at a castle.",
-      "media": [
-        "/images/anniversary-6th-1.jpg",
-        "/images/anniversary-6th-2.jpg",
-        "/images/anniversary-6th-3.jpg"
-      ]
-    },
-    {
-      "id": "event-13",
-      "title": "Move to Seattle",
-      "subtitle": "April 25, 2018",
-      "location": "Seattle, WA",
-      "description": "We moved our family to Seattle for new opportunities and adventures.",
-      "media": [
-        "/images/seattle-move-1.jpg",
-        "/images/seattle-move-2.jpg",
-        "/images/seattle-move-3.jpg"
-      ]
-    },
-    {
-      "id": "event-14",
-      "title": "Radiation Treatment",
-      "subtitle": "August 19, 2018",
-      "location": "Seattle, WA",
-      "description": "Completed radiation treatment successfully. A tough journey, but we came out stronger.",
-      "media": [
-        "/images/radiation-1.jpg",
-        "/images/radiation-2.jpg"
-      ]
-    },
-    {
-      "id": "event-15",
-      "title": "7th Wedding Anniversary",
-      "subtitle": "September 29, 2018",
-      "location": "Seattle, WA",
-      "description": "Celebrated with a morning brunch cruise, Romanian festival in the afternoon, and comedy clutch at night.",
-      "media": [
-        "/images/anniversary-7th-1.jpg",
-        "/images/anniversary-7th-3.jpg",
-        "/images/anniversary-7th-2.jpg"
-      ]
-    },
-    {
-      "id": "event-16",
-      "title": "Moved Back to California",
-      "subtitle": "July 6, 2020",
-      "location": "Seattle, WA - Fresno, CA",
-      "description": "",
-      "media": [
-        "/images/fresno-move-1.jpg",
-        "/images/fresno-move-2.jpg",
-        "/images/fresno-move-3.jpg"
-      ]
-    },
-    {
-      "id": "event-17",
-      "title": "9th Wedding Anniversary",
-      "subtitle": "August 22, 2020",
-      "location": "Cayucos, CA",
-      "description": "",
-      "media": [
-        "/images/anniversary-9th-1.jpg",
-        "/images/anniversary-9th-2.jpg"
-      ]
-    },
-    {
-      "id": "event-18",
-      "title": "Adopted Winston",
-      "subtitle": "December 29, 2020",
-      "location": "Carson, CA",
-      "description": "",
-      "media": [
-        "/images/adopted-winston-1.jpg",
-        "/images/adopted-winston-2.jpg"
-      ]
-    },
-    {
-      "id": "event-19",
-      "title": "Bought Kaweah House Again",
-      "subtitle": "June 17, 2021",
-      "location": "Clovis, CA",
-      "description": "",
-      "media": [
-        "/images/kaweah-house-1.jpg",
-        "/images/kaweah-house-2.jpg"
-      ]
-    },
-    {
-      "id": "event-20",
-      "title": "10th Wedding Anniversary",
-      "subtitle": "September 24, 2021",
-      "location": "Huntington Beach, CA",
-      "description": "",
-      "media": [
-        "/images/anniversary-10th-1.jpg",
-        "/images/anniversary-10th-2.jpg",
-        "/images/anniversary-10th-3.jpg"
-      ]
-    },
-    {
-      "id": "event-21",
-      "title": "11th Wedding Anniversary",
-      "subtitle": "September 24, 2021",
-      "location": "Huntington Beach, CA",
-      "description": "",
-      "media": [
-        "/images/anniversary-11th-1.jpg",
-        "/images/anniversary-11th-2.jpg",
-        "/images/anniversary-11th-3.jpg"
-      ]
-    },
-    {
-      "id": "event-22",
-      "title": "12th Wedding Anniversary",
-      "subtitle": "September 24, 2023",
-      "location": "San Diego, CA",
-      "description": "",
-      "media": [
-        "/images/anniversary-12th-1.jpg",
-        "/images/anniversary-12th-2.jpg"
-      ]
-    },
-    {
-      "id": "event-23",
-      "title": "Hawaii Birthday Trip",
-      "subtitle": "December 25, 2023",
-      "location": "Kauai, HI",
-      "description": "",
-      "media": [
-        "/images/hawaii-birthday-1.jpg",
-        "/images/hawaii-birthday-2.jpg",
-        "/images/hawaii-birthday-3.jpg"
-      ]
-    },
-    {
-      "id": "event-24",
-      "title": "Separation",
-      "subtitle": "December 25, 2024",
-      "location": "Clovis, CA",
-      "description": "",
-      "media": [
-        "/images/separation-1.jpg",
-        "/images/separation-2.jpg"
-      ]
-    },
-    {
-      "id": "event-25",
-      "title": "Reunited",
-      "subtitle": "November 7, 2024",
-      "location": "Clovis, CA",
-      "description": "",
-      "media": [
-        "/images/reunited-1.jpg",
-        "/images/reunited-2.jpg"
-      ]
-    },
-    {
-      "id": "event-26",
-      "title": "14th Wedding Anniversary",
-      "subtitle": "September 26, 2025",
-      "location": "Palm Springs, CA",
-      "description": "",
-      "media": [
-        "/images/anniversary-14th-1.jpg",
-        "/images/anniversary-14th-2.jpg"
+        "https://doodleipsum.com/700x500/abstract?n=12&bg=ceebff",
+        "https://doodleipsum.com/700x500/abstract?n=13&bg=ceebff"
       ]
     }
   ]

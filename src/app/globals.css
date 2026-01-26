@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fdfdfd;
   --foreground: #171717;
-  --primary: #9CAF97;
-  --secondary: #E6E1D8;
-  --highlight: #A18A5F;
-  --topcoat-white: #FFFFFF;
-  --topcoat-gray: #f5f5f5;
-  --text-gray: #4A4A4A;
-  --shadow-primary: 0 12.5px 100px -10px rgba(156, 175, 151, 0.75), 0 10px 10px -10px rgba(156, 175, 151, 0.5);
-  --event-bg-0: color-mix(in srgb, var(--topcoat-white) 95% var(--primary));
-  --event-bg-1: color-mix(in srgb, var(--topcoat-white) 90% var(--primary));
-  --event-bg-2: color-mix(in srgb, var(--topcoat-white) 85% var(--primary));
-  --event-bg-3: color-mix(in srgb, var(--topcoat-white) 80% var(--primary));
-  --event-bg-4: color-mix(in srgb, var(--topcoat-white) 75% var(--primary));
-  --event-bg-5: color-mix(in srgb, var(--topcoat-white) 70% var(--primary));
+  --primary: #4a5568;
+  --secondary: #edf2f7;
+  --highlight: #718096;
+  --topcoat-white: #ffffff;
+  --topcoat-gray: #f7fafc;
+  --text-gray: #2d3748;
+  --shadow-primary: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --event-bg-0: #f7fafc;
+  --event-bg-1: #edf2f7;
+  --event-bg-2: #e2e8f0;
+  --event-bg-3: #cbd5e0;
+  --event-bg-4: #a0aec0;
+  --event-bg-5: #718096;
 }
 
 .theme-sage {
@@ -94,7 +94,7 @@ body {
 }
 
 .landing-screen {
-  background-image: url('https://images.unsplash.com/photo-1507139122618-7947bb6f00d6?q=80&w=2070&auto=format&fit=crop');
+  background-image: url('https://images.unsplash.com/photo-1713897564381-4fea4976a7ef?q=80&w=2070&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
 }

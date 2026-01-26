@@ -1,39 +1,34 @@
 # Build stage
-FROM node:20 AS builder
+FROM oven/bun:1 AS builder
 
 WORKDIR /app
 
 # Copy package files
-COPY package*.json ./
+COPY package.json bun.lock ./
 
 # Install all dependencies (including dev for build)
-RUN npm ci && npm cache clean --force
+RUN bun install --frozen-lockfile
 
 # Copy source code
 COPY . .
 
 # Build the application
-RUN npm run build
+RUN bun run build
 
 # Production stage
-FROM node:20 AS runner
+FROM oven/bun:1 AS runner
 
 WORKDIR /app
 
-# Set non-root user
-RUN groupadd --system --gid 1001 nodejs
-RUN useradd --system --uid 1001 nextjs
-
 # Copy built application
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public
-
-USER nextjs
+# Next.js standalone output includes necessary node_modules
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
 
 EXPOSE 3000
 
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-CMD ["node", "server.js"]
+CMD ["bun", "server.js"]
