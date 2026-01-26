@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    document.documentElement.className = 'theme-sage';
+    document.documentElement.className = 'theme-navy';
   }, []);
 
   useEffect(() => {
@@ -66,7 +66,7 @@ export default function Home() {
 
     let title;
     if (currentEventIndex === -1) {
-      title = `Our Anniversary: ${anniversaryYears} years! - ${config.siteTitle}`;
+      title = `Our Story: ${anniversaryYears} years - ${config.siteTitle}`;
     } else {
       const event = config.timelineEvents[currentEventIndex];
       title = `${event.title} - ${config.siteTitle}`;
@@ -140,9 +140,9 @@ export default function Home() {
                 <a
                   href={`#${event.id}`}
                   onClick={(e) => { e.preventDefault(); scrollToEvent(index); }}
-                  className={`block w-2 h-2 bg-[var(--topcoat-gray)] rounded-full timeline-nav-dot ${currentEventIndex === index ? 'active' : ''}`}
+                  className={`block w-4 h-4 bg-[var(--topcoat-gray)] rounded-full timeline-nav-dot shadow-md shadow-black/50 ${currentEventIndex === index ? 'active' : ''}`}
                 ></a>
-                <div className="absolute right-full top-1/2 -translate-y-1/2 mr-4 px-3 py-1 bg-[var(--primary)] text-[var(--topcoat-white)] text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                <div className="absolute right-full top-1/2 -translate-y-1/2 mr-4 px-3 py-1 bg-[var(--primary)] text-[var(--topcoat-gray)] text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                   {event.title}
                   <div className="absolute left-full top-1/2 -translate-y-1/2 w-2 h-2 bg-[var(--primary)] rotate-45"></div>
                 </div>
