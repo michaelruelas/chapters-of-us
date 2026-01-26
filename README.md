@@ -2,7 +2,13 @@
 
 Create a beautiful, responsive vertical timeline of your love story. Perfect for anniversaries, featuring a vintage polaroid aesthetic with mobile-first design, immersive landing page, and interactive navigation.
 
-![Demo Image](demo-image.png)
+[![Chapters of Us Demo](https://img.youtube.com/vi/QXbxt-0gaMI/0.jpg)](https://www.youtube.com/watch?v=QXbxt-0gaMI)
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=QXbxt-0gaMI">
+    <img src="https://img.youtube.com/vi/QXbxt-0gaMI/maxresdefault.jpg" alt="Chapters of Us Demo" style="width:100%; max-width:600px;">
+  </a>
+</div>
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
