@@ -49,4 +49,4 @@ CI runs lint, format check, tests, and build on every push and PR. See [docs/QUA
 - **Landing background**: [Unsplash – A lone vehicle drives across vast white sand dunes](https://unsplash.com/photos/a-lone-vehicle-drives-across-vast-white-sand-dunes-caTXL5CVRcQ)
 - **Framer Motion**: Used for all transitions and scroll-driven animations.
 
-<!-- ci-trigger -->
+<!-- ci-trigger-2 -->
