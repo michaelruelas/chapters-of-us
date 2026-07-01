@@ -1,126 +1,50 @@
 # Chapters of Us
 
-Create a beautiful, responsive vertical timeline of your love story. Perfect for anniversaries, featuring a vintage polaroid aesthetic with mobile-first design, immersive landing page, and interactive navigation.
+A beautiful, responsive vertical timeline of your love story. Built for anniversaries, featuring a vintage polaroid aesthetic with mobile-first design, an immersive landing page, and interactive navigation.
 
-https://github.com/user-attachments/assets/6329df45-7a1a-42e4-9551-3830ae38883d
+![Demo](./demo-image.png)
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A [Next.js](https://nextjs.org) project using [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) (Playfair Display, Dancing Script, Inter) and [Framer Motion](https://www.framer.com/motion/).
 
-## Getting Started
-
-First, run the development server:
+## Getting started
 
 ```bash
+bun install
 bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://localhost:3000> to see the site. The page is driven by [`public/config.json`](./public/config.json); edits hot-reload in dev.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Documentation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load fonts (Playfair Display, Dancing Script, Inter).
+| Doc                                        | Topic                                          |
+| ------------------------------------------ | ---------------------------------------------- |
+| [docs/README.md](./docs/README.md)         | Index                                          |
+| [docs/STYLEGUIDE.md](./docs/STYLEGUIDE.md) | Themes, typography, polaroids                  |
+| [docs/CONTENT.md](./docs/CONTENT.md)       | `config.json` schema, adding events and images |
+| [docs/TESTING.md](./docs/TESTING.md)       | Vitest + Testing Library                       |
+| [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md) | Docker, Vercel, homelab                        |
+| [docs/QUALITY.md](./docs/QUALITY.md)       | Lint, format, pre-commit, CI                   |
 
-## Customization
+For AI coding agents: see [`AGENTS.md`](./AGENTS.md) and [`docs/agents/`](./docs/agents/README.md).
 
-The site is fully customizable via the `public/config.json` file and environment variables (`.env.local`). Edit these to personalize your anniversary timeline without code changes.
+## Scripts
 
-### 1. config.json (Content & Events)
+| Command                | Purpose                                         |
+| ---------------------- | ----------------------------------------------- |
+| `bun run dev`          | Dev server with Turbopack hot reload            |
+| `bun run build`        | Production build (standalone output for Docker) |
+| `bun run start`        | Run the production build                        |
+| `bun run lint`         | ESLint via `eslint-config-next`                 |
+| `bun run lint:fix`     | Auto-fix lint issues                            |
+| `bun run format`       | Format the whole repo with Prettier             |
+| `bun run format:check` | Verify formatting (used in CI)                  |
+| `bun run test`         | Run Vitest suite once                           |
+| `bun run test:watch`   | Watch mode for tests                            |
 
-Edit `public/config.json` for your story details. This loads dynamically and drives metadata, titles, and content.
-
-#### Structure
-
-```json
-{
-  "siteTitle": "Chapters of Us",
-  "anniversaryDate": "2013-09-21T12:00:00",
-  "timelineEvents": [
-    {
-      "id": "event-1",
-      "title": "Our First Date",
-      "subtitle": "September 21, 2013",
-      "location": "The Little Cafe, Downtown",
-      "description": "It all started with a cup of coffee. We talked for hours and it felt like minutes. I knew something special was beginning.",
-      "media": [
-        "https://placehold.co/600x400/d1d4c9/5b6058?text=First+Date",
-        "https://placehold.co/600x400/e0dace/5b6058?text=Coffee"
-      ]
-    }
-    // Add more events...
-  ]
-}
-```
-
-- **siteTitle** (optional): Base site title (e.g., "Chapters of Us"). Used for HTML `<title>`, meta tags, and dynamic browser tab titles. Defaults to "Chapters of Us" if omitted. Great for SEO and branding.
-- **anniversaryDate**: Date in ISO format (e.g., "2013-09-21T12:00:00"). Used to calculate years for the landing title (can be overridden via env).
-- **timelineEvents**: Array of events (5-10 recommended). Each includes:
-  - **id** (required): Unique ID (e.g., "event-1") for navigation.
-  - **title** (required): Main heading (e.g., "Our First Date"). Also used in dynamic browser tab titles (e.g., "Our First Date - Chapters of Us").
-  - **subtitle** (required): Date/tagline (e.g., "September 21, 2013").
-  - **location** (required): Where it happened (e.g., "The Little Cafe, Downtown").
-  - **description** (optional): Story text (1-3 sentences).
-  - **media** (required): 2-3 image URLs (e.g., Unsplash, ImgBB, or `/public/images/my-photo.jpg` for local). Render as polaroids. Supports JPG, PNG, SVG.
-
-After editing, restart `bun run dev` to see changes (including metadata updates). Replace placeholders with real photos (high-res, 600x400+ recommended).
-
-#### Metadata and Dynamic Titles
-- **Static Metadata**: The base `<title>` and `<meta description>` in the HTML head are generated from `siteTitle` and a fixed description ("Our love story through the years"). This improves SEO and social sharing previews.
-- **Dynamic Browser Tab Titles**: As you navigate:
-  - Landing: "Our Anniversary: 12 years! - Chapters of Us"
-  - Chapter/Event: "Our First Date - Chapters of Us" (updates on scroll/arrows/sidebar clicks).
-- View source (Ctrl+U) to see static metadata. Tab title changes in real-time for better UX.
-
-### 2. Environment Variables (.env.local)
-
-For server/port and overrides, use `.env.local` (gitignored template: `.env.example`).
-
-#### Setup
-1. Copy: `cp .env.example .env.local`
-2. Edit `.env.local` (never commit it).
-3. Restart server for changes.
-
-#### Example .env.local
-```
-# Development server port (default: 3000)
-PORT=3000
-
-# Base URL for production (e.g., absolute links/images)
-NEXT_PUBLIC_BASE_URL=http://localhost:3000
-
-# Optional: Override anniversary date (YYYY-MM-DD)
-NEXT_PUBLIC_ANIVERSARY_DATE=2013-09-21
-
-# Optional: Custom image domains (update next.config.js if needed)
-```
-
-#### Key Variables
-- **PORT** (number): Dev/production server port (e.g., `PORT=51253` for http://localhost:51253). Next.js auto-detects.
-- **NEXT_PUBLIC_BASE_URL** (string): Public base URL (e.g., `https://your-homelab.com`). For future links/images.
-- **NEXT_PUBLIC_ANIVERSARY_DATE** (string, YYYY-MM-DD): Overrides `config.json` anniversaryDate for year calc (e.g., forces "12 years!").
-- **Notes**:
-  - `NEXT_PUBLIC_` vars are client-side (browser-safe).
-  - For CORS/iframes: Add `--hostname 0.0.0.0` to `package.json` dev script.
-  - Testing: Change PORT, restart `bun run dev`, visit new URL. Year updates via env override.
-  - Production: Set vars in deploy platform (Vercel dashboard) or server env (nginx/Docker).
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-For homelab deployment, build with `bun run build` and serve the `/out` directory with a static server (e.g., nginx) or use `bun run start` after building.
+CI runs lint, format check, tests, and build on every push and PR. See [docs/QUALITY.md](./docs/QUALITY.md).
 
 ## Attributions
 
-- **Landing Page Background**: [Unsplash - A lone vehicle drives across vast white sand dunes](https://unsplash.com/photos/a-lone-vehicle-drives-across-vast-white-sand-dunes-caTXL5CVRcQ)
-- **Placeholder Images**: [Doodle Ipsum](https://doodleipsum.com/)
+- **Landing background**: [Unsplash – A lone vehicle drives across vast white sand dunes](https://unsplash.com/photos/a-lone-vehicle-drives-across-vast-white-sand-dunes-caTXL5CVRcQ)
+- **Framer Motion**: Used for all transitions and scroll-driven animations.
