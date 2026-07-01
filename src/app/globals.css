@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #fdfdfd;
@@ -10,87 +10,57 @@
   --topcoat-gray: #f7fafc;
   --text-gray: #2d3748;
   --shadow-primary: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --event-bg-0: #f7fafc;
-  --event-bg-1: #edf2f7;
-  --event-bg-2: #e2e8f0;
-  --event-bg-3: #cbd5e0;
-  --event-bg-4: #a0aec0;
-  --event-bg-5: #718096;
 }
 
 .theme-sage {
-  --primary: #9CAF97;
-  --secondary: #E6E1D8;
-  --highlight: #A18A5F;
-  --topcoat-white: #FFFFFF;
-  --text-gray: #4A4A4A;
-  --shadow-primary: 0 12.5px 100px -10px rgba(156, 175, 151, 0.75), 0 10px 10px -10px rgba(156, 175, 151, 0.5);
-  --event-bg-0: color-mix(in srgb, var(--topcoat-white) 95% var(--primary));
-  --event-bg-1: color-mix(in srgb, var(--topcoat-white) 90% var(--primary));
-  --event-bg-2: color-mix(in srgb, var(--topcoat-white) 85% var(--primary));
-  --event-bg-3: color-mix(in srgb, var(--topcoat-white) 80% var(--primary));
-  --event-bg-4: color-mix(in srgb, var(--topcoat-white) 75% var(--primary));
-  --event-bg-5: color-mix(in srgb, var(--topcoat-white) 70% var(--primary));
+  --primary: #9caf97;
+  --secondary: #e6e1d8;
+  --highlight: #a18a5f;
+  --topcoat-white: #ffffff;
+  --text-gray: #4a4a4a;
+  --shadow-primary:
+    0 12.5px 100px -10px rgba(156, 175, 151, 0.4), 0 10px 10px -10px rgba(156, 175, 151, 0.3);
 }
 
 .theme-navy {
-  --primary: #1A293E;
-  --secondary: #F5F7F8;
-  --highlight: #A88B4C;
-  --topcoat-white: #F5F7F8;
+  --primary: #1a293e;
+  --secondary: #f5f7f8;
+  --highlight: #a88b4c;
+  --topcoat-white: #f5f7f8;
   --text-gray: #000000;
-  --shadow-primary: 0 12.5px 100px -10px rgba(26, 41, 62, 0.4), 0 10px 10px -10px rgba(26, 41, 62, 0.3);
-  --event-bg-0: color-mix(in srgb, var(--topcoat-white) 95% var(--primary));
-  --event-bg-1: color-mix(in srgb, var(--topcoat-white) 90% var(--primary));
-  --event-bg-2: color-mix(in srgb, var(--topcoat-white) 85% var(--primary));
-  --event-bg-3: color-mix(in srgb, var(--topcoat-white) 80% var(--primary));
-  --event-bg-4: color-mix(in srgb, var(--topcoat-white) 75% var(--primary));
-  --event-bg-5: color-mix(in srgb, var(--topcoat-white) 70% var(--primary));
+  --shadow-primary:
+    0 12.5px 100px -10px rgba(26, 41, 62, 0.4), 0 10px 10px -10px rgba(26, 41, 62, 0.3);
 }
 
 .theme-gray {
   --primary: #333333;
-  --secondary: #F2F2F2;
-  --highlight: #C0C0C0;
-  --topcoat-white: #FFFFFF;
+  --secondary: #f2f2f2;
+  --highlight: #c0c0c0;
+  --topcoat-white: #ffffff;
   --text-gray: #333333;
-  --shadow-primary: 0 12.5px 100px -10px rgba(51, 51, 51, 0.4), 0 10px 10px -10px rgba(51, 51, 51, 0.3);
-  --event-bg-0: color-mix(in srgb, var(--topcoat-white) 95% var(--primary));
-  --event-bg-1: color-mix(in srgb, var(--topcoat-white) 90% var(--primary));
-  --event-bg-2: color-mix(in srgb, var(--topcoat-white) 85% var(--primary));
-  --event-bg-3: color-mix(in srgb, var(--topcoat-white) 80% var(--primary));
-  --event-bg-4: color-mix(in srgb, var(--topcoat-white) 75% var(--primary));
-  --event-bg-5: color-mix(in srgb, var(--topcoat-white) 70% var(--primary));
+  --shadow-primary:
+    0 12.5px 100px -10px rgba(51, 51, 51, 0.4), 0 10px 10px -10px rgba(51, 51, 51, 0.3);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-highlight: var(--highlight);
   --color-topcoat-white: var(--topcoat-white);
   --color-topcoat-gray: var(--topcoat-gray);
   --color-text-gray: var(--text-gray);
-  --shadow-primary: var(--shadow-primary);
+  --font-sans: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+  --font-dancing-script: var(--font-dancing-script);
 }
-
 
 body {
   background: var(--secondary);
   color: var(--text-gray);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), 'Inter', sans-serif;
   scroll-behavior: smooth;
-}
-
-.font-dancing-script {
-  font-family: 'Dancing Script', cursive;
-}
-
-.font-playfair {
-  font-family: 'Playfair Display', serif;
 }
 
 .landing-screen {
@@ -108,27 +78,31 @@ body {
 }
 
 .polaroid .caption {
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-dancing-script), 'Dancing Script', cursive;
   font-size: 1.25rem;
   text-align: center;
   margin-top: 0.75rem;
   color: var(--highlight);
 }
 
+.timeline-event {
+  background-color: color-mix(
+    in srgb,
+    var(--topcoat-white) var(--event-bg-pct, 90%),
+    var(--primary)
+  );
+}
+
 .timeline-nav-dot.active {
   background-color: var(--primary);
   transform: scale(0.75);
-  box-shadow: 0 4px 12px rgba(var(--highlight-rgb), 0.4);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--highlight) 40%, transparent);
   transition: all 0.3s ease;
 }
 
 .nav-arrow {
-  position: fixed;
-  right: 1%;
-  transform: translateX(-50%);
-  z-index: 20;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0;
   color: var(--topcoat-white);
   transition: opacity 0.3s ease;
 }
@@ -139,36 +113,4 @@ body {
 
 .nav-arrow.visible {
   opacity: 0.5;
-}
-
-#up-arrow {
-  top: 2%;
-}
-
-#down-arrow {
-  bottom: 2%;
-}
-
-.event-bg-0 {
-  background-color: var(--event-bg-0);
-}
-
-.event-bg-1 {
-  background-color: var(--event-bg-1);
-}
-
-.event-bg-2 {
-  background-color: var(--event-bg-2);
-}
-
-.event-bg-3 {
-  background-color: var(--event-bg-3);
-}
-
-.event-bg-4 {
-  background-color: var(--event-bg-4);
-}
-
-.event-bg-5 {
-  background-color: var(--event-bg-5);
 }

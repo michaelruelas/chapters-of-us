@@ -1,34 +1,56 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Inter, Playfair_Display, Dancing_Script } from 'next/font/google';
+import './globals.css';
 import configData from '../../public/config.json';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const playfair = Playfair_Display({
+  variable: '--font-playfair',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
-async function getConfig() {
-  return configData;
-}
+const dancingScript = Dancing_Script({
+  variable: '--font-dancing-script',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
-export async function generateMetadata() {
-  const config = await getConfig();
+const siteTitle = configData.siteTitle || 'Chapters of Us';
+const siteDescription = configData.description || 'Our love story through the years';
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+
+export function generateMetadata() {
   return {
-    title: config.siteTitle || 'Chapters of Us',
-    description: 'Our love story through the years',
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: siteTitle,
+      template: `%s - ${siteTitle}`,
+    },
+    description: siteDescription,
+    openGraph: {
+      title: siteTitle,
+      description: siteDescription,
+      type: 'website',
+      url: baseUrl,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: siteTitle,
+      description: siteDescription,
+    },
   };
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${playfair.variable} ${dancingScript.variable} antialiased`}
       >
         {children}
       </body>
